@@ -43,6 +43,12 @@ public class ChartIO {
 			e.printStackTrace();
 		}
 
+
+	}
+	public static void main(String[]args){
+		ChartIO chartIO=new ChartIO();
+		chartIO.readFile("asd.txt");
+
 	}
 	
 
