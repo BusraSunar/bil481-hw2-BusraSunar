@@ -1,4 +1,4 @@
-package demo.junit_class_demo.grades;
+package grades;
 
 public class HistogramMain {
 

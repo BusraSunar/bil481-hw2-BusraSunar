@@ -1,12 +1,12 @@
-package demo.junit_class_demo.math;
+package math;
 
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import demo.junit_class_demo.math.MyAdvancedMath;
-import demo.junit_class_demo.math.MyMath;
+import math.MyAdvancedMath;
+import math.MyMath;
 
 import static org.mockito.Mockito.*;
 

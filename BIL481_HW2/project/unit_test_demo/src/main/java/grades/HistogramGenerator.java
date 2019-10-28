@@ -1,4 +1,4 @@
-package demo.junit_class_demo.grades;
+package grades;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;

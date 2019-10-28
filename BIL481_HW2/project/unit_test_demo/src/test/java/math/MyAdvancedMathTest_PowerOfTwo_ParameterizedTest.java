@@ -1,4 +1,4 @@
-package demo.junit_class_demo.math;
+package math;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -9,7 +9,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
-import demo.junit_class_demo.math.MyAdvancedMath;
+import math.MyAdvancedMath;
 
 import org.junit.Assert;
 

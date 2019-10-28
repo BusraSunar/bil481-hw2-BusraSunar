@@ -1,4 +1,4 @@
-package demo.junit_class_demo.math;
+package math;
 
 /**
  * An class that provides some "advanced" math operations

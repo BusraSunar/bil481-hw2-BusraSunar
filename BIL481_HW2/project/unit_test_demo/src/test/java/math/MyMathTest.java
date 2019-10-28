@@ -1,8 +1,8 @@
-package demo.junit_class_demo.math;
+package math;
 
 import org.junit.Test;
 
-import demo.junit_class_demo.math.MyMath;
+import math.MyMath;
 
 import org.junit.Assert;
 
