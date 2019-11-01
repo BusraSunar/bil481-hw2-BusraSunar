@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="12" failures="0" name="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="9.0.1+11"/>
@@ -65,15 +65,15 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerRangeNegative[0]" time="0"/>
-  <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerIsZero[0]" time="0.001"/>
+  <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerIsZero[0]" time="0"/>
   <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerRange30plus[0]" time="0"/>
   <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerOfTwoWithNormalCases[0]" time="0"/>
   <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerRangeNegative[1]" time="0"/>
-  <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerIsZero[1]" time="0.001"/>
+  <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerIsZero[1]" time="0"/>
   <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerRange30plus[1]" time="0"/>
   <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerOfTwoWithNormalCases[1]" time="0"/>
   <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerRangeNegative[2]" time="0"/>
   <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerIsZero[2]" time="0"/>
   <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerRange30plus[2]" time="0"/>
-  <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerOfTwoWithNormalCases[2]" time="0.001"/>
+  <testcase classname="demo.junit_class_demo.math.MyAdvancedMathTest_PowerOfTwo_ParameterizedTest" name="testPowerOfTwoWithNormalCases[2]" time="0"/>
 </testsuite>

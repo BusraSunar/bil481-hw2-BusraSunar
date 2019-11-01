@@ -18,21 +18,21 @@ import org.jfree.chart.ChartUtils;
 
 <span class="fc" id="L19">		try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {</span>
 			String line;
-<span class="pc bpc" id="L21" title="1 of 2 branches missed.">			while ((line = reader.readLine()) != null) {</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">			while ((line = reader.readLine()) != null) {</span>
 <span class="fc" id="L22">				linesList.add(Integer.parseInt(line));</span>
 			}
 <span class="fc" id="L24">		} catch (FileNotFoundException e) {</span>
 <span class="fc" id="L25">			throw new IllegalArgumentException(&quot;File &quot; + filepath + &quot; does not exist&quot;);</span>
 <span class="nc" id="L26">		} catch (IOException e) {</span>
 <span class="nc" id="L27">			throw new NumberFormatException();</span>
-<span class="nc" id="L28">		}</span>
+<span class="fc" id="L28">		}</span>
 
-<span class="nc" id="L30">		int[] linesArray = new int[linesList.size()];</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">		for (int index = 0; index &lt; linesList.size(); index++) {</span>
-<span class="nc" id="L32">			linesArray[index] = linesList.get(index);</span>
+<span class="fc" id="L30">		int[] linesArray = new int[linesList.size()];</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">		for (int index = 0; index &lt; linesList.size(); index++) {</span>
+<span class="fc" id="L32">			linesArray[index] = linesList.get(index);</span>
 		}
 
-<span class="nc" id="L35">		return linesArray;</span>
+<span class="fc" id="L35">		return linesArray;</span>
 	}
 
 	public void writeFile(String filepath, JFreeChart chart) {
