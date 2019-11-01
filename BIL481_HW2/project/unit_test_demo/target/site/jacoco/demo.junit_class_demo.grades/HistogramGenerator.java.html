@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HistogramGenerator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Junit Class Demo</a> &gt; <a href="index.source.html" class="el_package">demo.junit_class_demo.grades</a> &gt; <span class="el_source">HistogramGenerator.java</span></div><h1>HistogramGenerator.java</h1><pre class="source lang-java linenums">package demo.junit_class_demo.grades;
+
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
+
+public class HistogramGenerator {
+	private ChartIO utils;
+
+<span class="nc" id="L12">	public HistogramGenerator(ChartIO utils) {</span>
+<span class="nc" id="L13">		this.utils = utils;</span>
+<span class="nc" id="L14">	}</span>
+
+	public void generateHistogram(String gradesFilepath, String outputFilepath) {
+<span class="nc" id="L17">		int[] grades = this.utils.readFile(gradesFilepath);</span>
+<span class="nc" id="L18">		int[] frequencies = calculateFrequencies(grades);</span>
+<span class="nc" id="L19">		JFreeChart histogram = createChart(frequencies);</span>
+<span class="nc" id="L20">		this.utils.writeFile(outputFilepath, histogram);</span>
+<span class="nc" id="L21">	}</span>
+
+	public int[] calculateFrequencies(int[] grades) {
+<span class="nc" id="L24">		int[] frequencies = new int[11];</span>
+
+<span class="nc bnc" id="L26" title="All 2 branches missed.">		for(Integer i : grades) {</span>
+<span class="nc" id="L27">			frequencies[i]++;</span>
+		}
+
+<span class="nc" id="L30">		return frequencies;</span>
+	}
+
+	public JFreeChart createChart(int[] frequencies) {
+		/*
+		 * The XYSeriesCollection object is a set XYSeries series (dataset) that can be
+		 * visualized in the same chart
+		 */
+<span class="nc" id="L38">		XYSeriesCollection dataset = new XYSeriesCollection();</span>
+		/*
+		 * The XYSeries that are loaded in the dataset. There might be many series in
+		 * one dataset.
+		 */
+<span class="nc" id="L43">		XYSeries data = new XYSeries(&quot;random values&quot;);</span>
+
+<span class="nc bnc" id="L45" title="All 2 branches missed.">		for (int i = 0; i &lt; frequencies.length; i++) {</span>
+<span class="nc" id="L46">			data.add(i, frequencies[i]);</span>
+		}
+
+		// add the series to the dataset
+<span class="nc" id="L50">		dataset.addSeries(data);</span>
+
+<span class="nc" id="L52">		boolean legend = false; // do not visualize a legend</span>
+<span class="nc" id="L53">		boolean tooltips = false; // do not visualize tooltips</span>
+<span class="nc" id="L54">		boolean urls = false; // do not visualize urls</span>
+
+		// Declare and initialize a createXYLineChart JFreeChart
+<span class="nc" id="L57">		JFreeChart chart = ChartFactory.createXYLineChart(&quot;Grades' Frequency&quot;, &quot;grade&quot;, &quot;frequency&quot;, dataset,</span>
+				PlotOrientation.VERTICAL, legend, tooltips, urls);
+
+<span class="nc" id="L60">		return chart;</span>
+	}
+
+	public void exportChart(String filepath, JFreeChart chart) {
+<span class="nc" id="L64">		this.utils.writeFile(filepath, chart);</span>
+<span class="nc" id="L65">	}</span>
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>

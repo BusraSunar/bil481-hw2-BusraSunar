@@ -9,9 +9,5 @@
         <module name="481.demo.child" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="481.demo" target="1.8" />
-      <module name="481.demo.child" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

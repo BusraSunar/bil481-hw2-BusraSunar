@@ -1,7 +1,7 @@
-demo\junit_class_demo\math\MyMathTest.class
-demo\junit_class_demo\grades\ChartIOTest.class
-demo\junit_class_demo\grades\HistogramGeneratorTes.class
-demo\junit_class_demo\math\MyAdvancedMathTest.class
-demo\junit_class_demo\math\TestRunner.class
-demo\junit_class_demo\math\MyMathTestSuite.class
-demo\junit_class_demo\math\MyAdvancedMathTest_PowerOfTwo_ParameterizedTest.class
+math\MyMathTest.class
+grades\ChartIOTest.class
+grades\HistogramGeneratorTes.class
+math\TestRunner.class
+math\MyAdvancedMathTest.class
+math\MyMathTestSuite.class
+math\MyAdvancedMathTest_PowerOfTwo_ParameterizedTest.class

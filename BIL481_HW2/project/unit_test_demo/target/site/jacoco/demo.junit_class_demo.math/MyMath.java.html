@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MyMath.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Junit Class Demo</a> &gt; <a href="index.source.html" class="el_package">demo.junit_class_demo.math</a> &gt; <span class="el_source">MyMath.java</span></div><h1>MyMath.java</h1><pre class="source lang-java linenums">package demo.junit_class_demo.math;
+
+/**
+ * An class that provides some &quot;simple&quot; math operations
+ * for demonstrating Unit Testing.
+ */
+<span class="fc" id="L7">public class MyMath</span>
+{
+	/**
+	 * Receives an Integer number and returns its sign in the form of 
+	 * &quot;positive&quot; or &quot;negative. Zeros cause an {@link IllegalArgumentException}
+	 * @param number the integer input number
+	 * @return
+	 * A String value with the input number's sign
+	 * @exception IllegalArgumentException when input is 0
+	 */
+	public String checkSign(int number) {
+<span class="fc bfc" id="L18" title="All 2 branches covered.">		if ( number &gt; 0 ) {</span>
+<span class="fc" id="L19">			return &quot;positive&quot;;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">		} else if ( number &lt; 0 ) {</span>
+<span class="fc" id="L21">			return &quot;negative&quot;;</span>
+		} else {
+<span class="fc" id="L23">			throw new IllegalArgumentException(&quot;Number had no sign&quot;);</span>
+		}
+	}
+
+	/**
+	 * Reverses the sign of a given number
+	 * @param number the input number 
+	 * @return a number with reversed sign
+	 */
+	public int reverseNumber(int number) {
+<span class="fc" id="L33">		return -number;</span>
+	}
+
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.3.201901230119</span></div></body></html>
