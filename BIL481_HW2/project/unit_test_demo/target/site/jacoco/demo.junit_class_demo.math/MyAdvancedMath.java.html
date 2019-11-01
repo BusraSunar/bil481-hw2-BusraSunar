@@ -17,15 +17,15 @@
 	 * can cause an Integer overflow
 	 */
 	public int add(int x, int y) {
-<span class="nc bnc" id="L20" title="All 4 branches missed.">		if (x &lt; 0 || y &lt; 0) {</span>
-<span class="nc" id="L21">			throw new IllegalArgumentException(&quot;Input numbers should be positive.&quot;);</span>
+<span class="fc bfc" id="L20" title="All 4 branches covered.">		if (x &lt; 0 || y &lt; 0) {</span>
+<span class="fc" id="L21">			throw new IllegalArgumentException(&quot;Input numbers should be positive.&quot;);</span>
 		}
 
-<span class="nc bnc" id="L24" title="All 2 branches missed.">		if (y &gt; Integer.MAX_VALUE - x) {</span>
-<span class="nc" id="L25">			throw new IllegalArgumentException(&quot;Cannot fit the result in an Integer.&quot;);</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">		if (y &gt; Integer.MAX_VALUE - x) {</span>
+<span class="fc" id="L25">			throw new IllegalArgumentException(&quot;Cannot fit the result in an Integer.&quot;);</span>
 		}
 
-<span class="nc" id="L28">		return x + y;</span>
+<span class="fc" id="L28">		return x + y;</span>
 	}
 
 	/**
@@ -38,20 +38,20 @@
 	// TODO this method has only a Parameterized test. 
 	// Can you complete the other edge tests?
 	public int powerOfTwo(int power) {
-<span class="nc bnc" id="L41" title="All 2 branches missed.">		if (power == 0) {</span>
-<span class="nc" id="L42">			return 1;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">		if (power == 0) {</span>
+<span class="fc" id="L42">			return 1;</span>
 		}
 		// The case where the result doesn't fit in an Integer variable
-<span class="nc bnc" id="L45" title="All 4 branches missed.">		if (power &lt;0 || power &gt; 30) {</span>
-<span class="nc" id="L46">			throw new IllegalArgumentException(&quot;power should be 0&lt;=power&lt;=30&quot;);</span>
+<span class="fc bfc" id="L45" title="All 4 branches covered.">		if (power &lt;0 || power &gt; 30) {</span>
+<span class="fc" id="L46">			throw new IllegalArgumentException(&quot;power should be 0&lt;=power&lt;=30&quot;);</span>
 		}
 
-<span class="nc" id="L49">		int result = 1;</span>
-<span class="nc bnc" id="L50" title="All 2 branches missed.">		for(int i=1; i&lt;=power; i++) {</span>
-<span class="nc" id="L51">			result *= 2;</span>
+<span class="fc" id="L49">		int result = 1;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">		for(int i=1; i&lt;=power; i++) {</span>
+<span class="fc" id="L51">			result *= 2;</span>
 		}
 
-<span class="nc" id="L54">		return result;</span>
+<span class="fc" id="L54">		return result;</span>
 	}
 
 	/**
@@ -63,11 +63,11 @@
 	 * @return an array with reversed signs
 	 */
 	public int[] reverseArray(int[] array, MyMath mm) {
-<span class="nc bnc" id="L66" title="All 2 branches missed.">		for(int i=0; i&lt;array.length; i++) {</span>
-<span class="nc" id="L67">			array[i] = mm.reverseNumber(array[i]);</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">		for(int i=0; i&lt;array.length; i++) {</span>
+<span class="fc" id="L67">			array[i] = mm.reverseNumber(array[i]);</span>
 		}
 
-<span class="nc" id="L70">		return array;</span>
+<span class="fc" id="L70">		return array;</span>
 	}
 
 }

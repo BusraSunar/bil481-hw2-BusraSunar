@@ -13,6 +13,8 @@ import demo.junit_class_demo.math.MyAdvancedMath;
 
 import org.junit.Assert;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * A test class that implements a Parameterized test
  * for the MyAdvancedMath powerOfTwo method, 
@@ -46,8 +48,22 @@ public class MyAdvancedMathTest_PowerOfTwo_ParameterizedTest {
 	 */
 	@Test
 	public void testPowerOfTwoWithNormalCases() {
+		assertEquals(result,mam.powerOfTwo(power));
 
 	}
+	@Test
+	public void testPowerIsZero(){
+		assertEquals(1,mam.powerOfTwo(0));
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testPowerRangeNegative(){
+		mam.powerOfTwo(-1);
+	}
+	@Test (expected = IllegalArgumentException.class)
+	public void testPowerRange30plus(){
+		mam.powerOfTwo(32);
+	}
+
 
 }
 

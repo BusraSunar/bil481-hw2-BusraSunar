@@ -7,8 +7,10 @@ import org.junit.rules.ExpectedException;
 
 import demo.junit_class_demo.math.MyAdvancedMath;
 import demo.junit_class_demo.math.MyMath;
+import org.mockito.Mock;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.*;
 
 /**
@@ -29,7 +31,7 @@ public class MyAdvancedMathTest {
 	 */
 	//bu ne
 	public MyAdvancedMathTest() {
-
+		mam=new MyAdvancedMath();
 
 	}
 
@@ -60,7 +62,7 @@ public class MyAdvancedMathTest {
 	 */
 	@Test (expected = IllegalArgumentException.class)
 	public void testAdd_shouldThrowException_overflow() {
-		mam.add(-1,3);
+		mam.add(Integer.MAX_VALUE,5);
 
 	}
 
@@ -69,13 +71,25 @@ public class MyAdvancedMathTest {
 	 * one or more input values are negative. Testing
 	 * the exception is performed with a @Rule
 	 */
-	//@Rule
-	//public ExpectedException thrown = ExpectedException.none(); //initialize it to .none()
-	//@Test
-	//public void testAdd_shouldThrowException_negativeInput() {
-	//
-	//
-	//}
+	@Rule
+	public ExpectedException thrown = ExpectedException.none(); //initialize it to .none()
+	@Test(expected = IllegalArgumentException.class)
+	public void testAdd_shouldThrowException_bothnegativeInput() {
+		mam.add(-2,-3);
+
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testAdd_shouldThrowException_secondnegativeInput() {
+		mam.add(2,-3);
+
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testAdd_shouldThrowException_firstnegativeInput() {
+		mam.add(-3,2);
+
+	}
 
 	/*
 	 *  The following method aims to test the reverseArray
@@ -88,6 +102,7 @@ public class MyAdvancedMathTest {
 	 */
 	@Test
 	public void test_reverseArray() {
+		//ne dolduram bilemedim
 
 	}
 
@@ -98,8 +113,15 @@ public class MyAdvancedMathTest {
 	 * we have to mock them and predefine the results of
 	 * all calls that we plan to execute on the MyMaths' methods.
 	 */
+	@Mock
+	MyMath mm=new MyMath(); //emin degilim
 	@Test
 	public void test_reverseArray_Mocking() {
+		int [] array = {1,-2,3};
+		int [] returnedArray=mam.reverseArray(array,mm);
+		for (int i=0;i<array.length;i++){
+			assertEquals(array[i],returnedArray[i]);
+		}
 
 
 	}
