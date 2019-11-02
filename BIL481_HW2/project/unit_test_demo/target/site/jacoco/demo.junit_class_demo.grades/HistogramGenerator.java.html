@@ -9,9 +9,9 @@ import org.jfree.data.xy.XYSeriesCollection;
 public class HistogramGenerator {
 	private ChartIO utils;
 
-<span class="nc" id="L12">	public HistogramGenerator(ChartIO utils) {</span>
-<span class="nc" id="L13">		this.utils = utils;</span>
-<span class="nc" id="L14">	}</span>
+<span class="fc" id="L12">	public HistogramGenerator(ChartIO utils) {</span>
+<span class="fc" id="L13">		this.utils = utils;</span>
+<span class="fc" id="L14">	}</span>
 
 	public void generateHistogram(String gradesFilepath, String outputFilepath) {
 <span class="nc" id="L17">		int[] grades = this.utils.readFile(gradesFilepath);</span>
@@ -21,13 +21,13 @@ public class HistogramGenerator {
 <span class="nc" id="L21">	}</span>
 
 	public int[] calculateFrequencies(int[] grades) {
-<span class="nc" id="L24">		int[] frequencies = new int[11];</span>
+<span class="fc" id="L24">		int[] frequencies = new int[11];</span>
 
-<span class="nc bnc" id="L26" title="All 2 branches missed.">		for(Integer i : grades) {</span>
-<span class="nc" id="L27">			frequencies[i]++;</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">		for(Integer i : grades) {</span>
+<span class="fc" id="L27">			frequencies[i]++;</span>
 		}
 
-<span class="nc" id="L30">		return frequencies;</span>
+<span class="fc" id="L30">		return frequencies;</span>
 	}
 
 	public JFreeChart createChart(int[] frequencies) {
@@ -35,29 +35,29 @@ public class HistogramGenerator {
 		 * The XYSeriesCollection object is a set XYSeries series (dataset) that can be
 		 * visualized in the same chart
 		 */
-<span class="nc" id="L38">		XYSeriesCollection dataset = new XYSeriesCollection();</span>
+<span class="fc" id="L38">		XYSeriesCollection dataset = new XYSeriesCollection();</span>
 		/*
 		 * The XYSeries that are loaded in the dataset. There might be many series in
 		 * one dataset.
 		 */
-<span class="nc" id="L43">		XYSeries data = new XYSeries(&quot;random values&quot;);</span>
+<span class="fc" id="L43">		XYSeries data = new XYSeries(&quot;random values&quot;);</span>
 
-<span class="nc bnc" id="L45" title="All 2 branches missed.">		for (int i = 0; i &lt; frequencies.length; i++) {</span>
-<span class="nc" id="L46">			data.add(i, frequencies[i]);</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">		for (int i = 0; i &lt; frequencies.length; i++) {</span>
+<span class="fc" id="L46">			data.add(i, frequencies[i]);</span>
 		}
 
 		// add the series to the dataset
-<span class="nc" id="L50">		dataset.addSeries(data);</span>
+<span class="fc" id="L50">		dataset.addSeries(data);</span>
 
-<span class="nc" id="L52">		boolean legend = false; // do not visualize a legend</span>
-<span class="nc" id="L53">		boolean tooltips = false; // do not visualize tooltips</span>
-<span class="nc" id="L54">		boolean urls = false; // do not visualize urls</span>
+<span class="fc" id="L52">		boolean legend = false; // do not visualize a legend</span>
+<span class="fc" id="L53">		boolean tooltips = false; // do not visualize tooltips</span>
+<span class="fc" id="L54">		boolean urls = false; // do not visualize urls</span>
 
 		// Declare and initialize a createXYLineChart JFreeChart
-<span class="nc" id="L57">		JFreeChart chart = ChartFactory.createXYLineChart(&quot;Grades' Frequency&quot;, &quot;grade&quot;, &quot;frequency&quot;, dataset,</span>
+<span class="fc" id="L57">		JFreeChart chart = ChartFactory.createXYLineChart(&quot;Grades' Frequency&quot;, &quot;grade&quot;, &quot;frequency&quot;, dataset,</span>
 				PlotOrientation.VERTICAL, legend, tooltips, urls);
 
-<span class="nc" id="L60">		return chart;</span>
+<span class="fc" id="L60">		return chart;</span>
 	}
 
 	public void exportChart(String filepath, JFreeChart chart) {

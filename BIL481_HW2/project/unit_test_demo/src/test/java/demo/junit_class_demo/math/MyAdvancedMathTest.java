@@ -29,7 +29,7 @@ public class MyAdvancedMathTest {
 	 * This is a constructor which is called
 	 * when the MyAdvancedMathTest
 	 */
-	//bu ne
+
 	public MyAdvancedMathTest() {
 		mam=new MyAdvancedMath();
 
